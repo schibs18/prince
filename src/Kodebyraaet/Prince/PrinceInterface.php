@@ -25,9 +25,11 @@ interface PrinceInterface
     /**
      * Returns the generated PDF as as a Response.
      *
+     * @param string|null $filename
+     * @param bool $attachment
      * @return Response
      */
-    public function download();
+    public function download($filename = null, $attachment = false);
 
     /**
      * Stores the generated PDF in at a provided path.

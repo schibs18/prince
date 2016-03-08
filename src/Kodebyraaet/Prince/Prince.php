@@ -100,22 +100,34 @@ class Prince implements PrinceInterface
     /**
      * Returns the generated PDF as as a Response.
      *
+     * @param string|null $filename
+     * @param bool $attachment
      * @return Response
+     * @throws UnableToExecute
      */
-    public function download()
+    public function download($filename = null, $attachment = false)
     {
         $data = $this->generate();
 
         $this->reset();
 
+        $headers = [
+            'Content-Type' => 'application/pdf',
+        ];
+
+        if($filename != null) {
+            if($attachment) {
+                $headers['Content-Disposition'] = 'attachment; filename="' . $filename .'.pdf"';
+            } else {
+                $headers['Content-Disposition'] = 'inline; filename="' . $filename .'.pdf"';
+            }
+        }
+
         return ResponseFacade::stream(function () use ($data) {
             $out = fopen('php://output', 'w');
             fputs($out, $data);
             fclose($out);
-        }, 200, [
-            'Content-Type' => 'application/pdf'
-        ]);
-
+        }, 200, $headers);
     }
 
     /**
