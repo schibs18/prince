@@ -117,9 +117,9 @@ class Prince implements PrinceInterface
 
         if($filename != null) {
             if($attachment) {
-                $headers['Content-Disposition'] = 'attachment; filename="' . $filename .'.pdf"';
+                $headers['Content-Disposition'] = 'attachment; filename="' . $filename .'"';
             } else {
-                $headers['Content-Disposition'] = 'inline; filename="' . $filename .'.pdf"';
+                $headers['Content-Disposition'] = 'inline; filename="' . $filename .'"';
             }
         }
 
