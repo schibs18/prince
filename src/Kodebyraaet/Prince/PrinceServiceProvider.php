@@ -19,7 +19,7 @@ class PrinceServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('Kodebyraaet\Prince\PrinceInterface', function ($app) {
+        $this->app->singleton('Kodebyraaet\Prince\PrinceInterface', function ($app) {
             return new Prince($app);
         });
     }

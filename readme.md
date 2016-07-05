@@ -1,6 +1,6 @@
 # Laravel PrinceXML Wrapper
 
-Laravel PrinceXML Wrapper is a Laravel 4.2 package that wraps around the http://www.princexml.com/ PDF generator.
+Laravel PrinceXML Wrapper is a Laravel 5.1 package that wraps around the http://www.princexml.com/ PDF generator.
 
 ## Installation
 There's a requirement to have the "prince" executable installed.
