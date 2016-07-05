@@ -15,7 +15,7 @@ class Prince extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return PrinceInterface::class;
+        return 'Prince';
     }
 
 }
