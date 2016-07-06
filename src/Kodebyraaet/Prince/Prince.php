@@ -1,4 +1,6 @@
-<?php namespace Kodebyraaet\Prince;
+<?php 
+
+namespace Kodebyraaet\Prince;
 
 use File;
 use Illuminate\View\View;

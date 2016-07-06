@@ -1,4 +1,6 @@
-<?php namespace Kodebyraaet\Prince;
+<?php 
+
+namespace Kodebyraaet\Prince;
 
 use Illuminate\View\View;
 use Illuminate\Http\Response;

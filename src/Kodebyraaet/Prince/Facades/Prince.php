@@ -1,4 +1,6 @@
-<?php namespace Kodebyraaet\Prince\Facades;
+<?php 
+
+namespace Kodebyraaet\Prince\Facades;
 
 use Illuminate\Support\Facades\Facade;
 use Kodebyraaet\Prince\PrinceInterface;

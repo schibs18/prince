@@ -1,4 +1,6 @@
-<?php namespace Kodebyraaet\Prince;
+<?php 
+
+namespace Kodebyraaet\Prince;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -19,7 +21,7 @@ class PrinceServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('Kodebyraaet\Prince\PrinceInterface', function ($app) {
+        $this->app->bind('prince', function ($app) {
             return new Prince($app);
         });
     }
